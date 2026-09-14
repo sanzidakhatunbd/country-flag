@@ -1,6 +1,6 @@
 .country {
     background-color: rgba(255, 166, 0, 0.1);
-    border: 2px solid seagreen;
+    border: 2px solid #5F3F29;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
@@ -11,9 +11,9 @@
 }
 
 .country-visited {
-    background-color: rgba(144, 238, 144, 0.296);
+    background-color: #5f3f2925;
 }
 
 .country-visited p {
-    color: seagreen;
+    color: #5F3F29;
 }

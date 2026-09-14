@@ -31,21 +31,24 @@ export default function Countries({ countriesPromise }: CountriesProps) {
         }
     }
     return (
-        <div>
-            <h2>Countries: {countries.length}</h2>
-            <h4>Visited Countries: {visitedCountries.length}</h4>
+        <div className="container mx-auto">
+            <div className="border-2 border-amber-900  p-5 m-5 rounded-xl">
+
+            <h2 className="text-amber-900 italic text-xl">Countries: {countries.length}</h2>
+            <h4 className="text-amber-900 font-semibold italic">Visited Countries: {visitedCountries.length}</h4>
             <div>
                 <ul>
                     {
-                        visitedCountries.map(country => <li key={country.ccn3.ccn3}>{country.name.common}</li>)
+                        visitedCountries.map(country => <li key={country.ccn3.ccn3} className="italic text-amber-800">{country.name.common}</li>)
                     }
                 </ul>
             </div>
-            <h4>Visited Flags: {visitedFlags.length}</h4>
-            <div className="visited-flag">
+            <h4 className="italic font-semibold text-amber-800 pt-2">Visited Flags: {visitedFlags.length}</h4>
+            <div className="visited-flag py-3 flex flex-wrap gap-1">
                 {
                     visitedFlags.map((flag, index) => <img key={index} src={flag} alt="visited flag" />)
                 }
+                </div>
             </div>
             <div className="countries">
                 {

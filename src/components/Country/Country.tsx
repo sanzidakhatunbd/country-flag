@@ -23,14 +23,14 @@ const Country = ({ country, handleVisitedCountry, handleVisitedFlag }: CountryPr
     }
     return (
         <div className={`country ${visited ? 'country-visited' : ''}`}>
-            <h3>{country.name.common}</h3>
+            <h3 className="italic text-xl mb-1 text-amber-800">{country.name.common}</h3>
             <img src={country.flags.flags.png} alt={country.flags.flags.alt} />
-            <p className={`${visited && 'population-known'}`}>Population: {country.population.population}</p>
-            <p>Capital: {country.capital.capital}</p>
-            <button onClick={handleVisited}>
+            <p className={`${visited && 'population-known'} mt-2 text-amber-700`}>Population: {country.population.population}</p>
+            <p className="text-amber-700">Capital: {country.capital.capital}</p>
+            <button onClick={handleVisited} className="m-1 border rounded text-amber-950 px-2">
                 {visited ? 'Visited' : 'Mark as Visited'}
             </button>
-            <button onClick={() => handleVisitedFlag(country.flags.flags.png)}>Add Flag as Visited</button>
+            <button onClick={() => handleVisitedFlag(country.flags.flags.png)} className="px-2 border rounded text-amber-950">Add Flag as Visited</button>
         </div>
     )
 }
